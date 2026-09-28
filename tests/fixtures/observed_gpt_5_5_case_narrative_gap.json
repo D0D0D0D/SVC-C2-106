@@ -1,0 +1,11 @@
+{
+  "candidate_conflicts": [],
+  "gaps": [
+    {
+      "description": "Ultimate-beneficial-owner evidence has not been supplied.",
+      "clause_id": "client-identity",
+      "source_ids": ["case_narrative"]
+    }
+  ],
+  "verification_questions": []
+}

@@ -1,0 +1,42 @@
+{
+  "sample_notice": "SAMPLE-ENGAGEMENT-SCOPE — fictional acceptance policy and prior consultations bundled so the Marketplace deployment has a customer partition to read. Replace with the adopter's real policy edition and history before production use.",
+  "policy_edition_ref": "SAMPLE-acceptance-policy-2026",
+  "profession_profile": "audit_firm",
+  "clauses": [
+    {
+      "clause_id": "conflict-screening",
+      "clause_ref": "A-1",
+      "required_doc_type": "conflict_check"
+    },
+    {
+      "clause_id": "self-review-threat",
+      "clause_ref": "A-2",
+      "required_doc_type": "independence_declaration"
+    },
+    {
+      "clause_id": "client-identity",
+      "clause_ref": "A-3",
+      "required_doc_type": "kyc"
+    }
+  ],
+  "history": [
+    {
+      "history_ref": "SAMPLE-history-self-review",
+      "case_ref": "SAMPLE-case-prior",
+      "clause_id": "self-review-threat",
+      "perspective_code": "independence",
+      "consultation_summary": "Audit-client subsidiary requested control design work under a contingent fee.",
+      "decision_outcome": "declined",
+      "decision_rationale_safe": "Review whether control design creates a self-review or management threat."
+    },
+    {
+      "history_ref": "SAMPLE-history-conflict",
+      "case_ref": "SAMPLE-case-prior-2",
+      "clause_id": "conflict-screening",
+      "perspective_code": "conflict",
+      "consultation_summary": "Prospective client is in litigation with an existing audit client.",
+      "decision_outcome": "accepted_with_conditions",
+      "decision_rationale_safe": "Confirm information barriers and record the conflict screening outcome."
+    }
+  ]
+}

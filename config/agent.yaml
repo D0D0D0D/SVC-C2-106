@@ -1,0 +1,33 @@
+# Agent Manifest — AgentRegistry entry point
+# This file is required for AgentRegistry auto-discovery (lazy-load architecture)
+#
+# NOTE: This file is the STATIC manifest. Runtime-tunable parameters live in
+# config/config.yaml (the static manifest / runtime parameter split).
+
+id: "SVC-C2-106"
+name: "Professional Services Engagement Acceptance Evidence Agent"
+namespace: "svc"
+version: "1.0.0"
+enabled: true
+category: "Cat 2"
+# Static generation contract. Omitted by legacy templates defaults to deterministic.
+# This AG drives its LLM stage through the config["llm"] injection seam (BaseLLM), so the
+# truthful declaration is llm — omitting it would record an LLM template as deterministic.
+generation_mode: "llm"  # deterministic | llm
+industry: "SVC"
+
+# L1 base graph class (direct L1 inheritance - no Level 2 base agent)
+base_type: "AgentBaseGraph"
+
+# Entry point
+class: "src.graph.graph.EngagementAcceptanceEvidenceGraph"
+
+# Security
+required_trust_level: "VERIFIED_EXTERNAL"
+
+requires:
+  extras: []
+  secrets:
+    - LLM_API_KEY
+    - ENGAGEMENT_DB_DSN
+    - ENGAGEMENT_KB_DSN

@@ -1,0 +1,25 @@
+# Runtime parameters — SVC-C2-106
+# Static manifest (name / class / requires) lives in config/agent.yaml.
+# Values here are INITIAL DESIGN VALUES; template users tune them for their environment.
+
+# --- Domain scope (set by a human; the agent never infers this) ---
+profession_profile: "audit_firm"      # audit_firm | law_firm | consultancy
+
+# --- Retrieval ---
+top_k: 8                              # number of past review perspectives recalled (Stage 2)
+
+# --- Data governance ---
+retention_days: 365                   # derived records retention (customer-tunable)
+payload_ttl_s: 900                    # payload_store TTL for sensitive request bodies
+max_rationale_chars: 1000             # cap on the model-visible decision_rationale_safe projection
+
+# --- Execution ---
+max_retry: 3
+timeout_s: 60
+
+# --- Checkpointing / HITL ---
+# HITL is not used: the brief is always non-conclusive and the acceptance decision is
+# made by a human outside the graph. Human review lands via the async /feedback mode.
+memory_enabled: false
+hitl:
+  enabled: false

@@ -1,0 +1,13 @@
+{
+  "candidate_conflicts": [
+    {
+      "description": "The narrative indicates a potential conflict.",
+      "clause_id": "conflict-screening",
+      "source_ids": ["case_narrative"],
+      "severity": "candidate",
+      "confidence": 0.7
+    }
+  ],
+  "gaps": [],
+  "verification_questions": []
+}
